@@ -1,0 +1,741 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body,html{height: 100%;background: #E2E2E2}
+body,ul{margin:0;padding:0}
+body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
+li{list-style:none} 
+a{
+	text-decoration: none;
+
+}
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav{
+	width: 150px;
+	background: #1a1a1a;
+	transition: all .3s;
+	float: left;
+	height: 100%;
+	position: fixed;
+	padding-top: 41px;
+	z-index: 8;
+}
+.nav-item a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #ABB1B7;transition: all .3s;}
+.nav a span{margin-left: 30px;}
+.nav-item{position: relative;}
+.nav-item.nav-show{border-bottom: none;}
+.nav-item ul{display: none;background: rgba(0,0,0,.1);}
+.nav-item.nav-show ul{display: block;}
+.nav-item>a:before{content: "";position: absolute;left: 0px;width: 2px;height: 46px;background: #34A0CE;opacity:0;transition: all .3s;}
+.nav .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after{content: "\e62b";}
+.icon_2::after{content: "\e669";}
+.icon_3::after{content: "\e61d";}
+/*---------------------*/
+.nav-more{float:right;margin-right: 20px;font-size: 12px;transition: transform .3s;}
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after{content: "\e621";}
+/*---------------------*/
+.nav-show .nav-more{transform:rotate(90deg);}
+.nav-show,.nav-item>a:hover{color: #FFF;background:rgba(0,0,0,.1);}
+.nav-show>a:before,.nav-item>a:hover:before{opacity:1;}
+.nav-item li:hover a{color: #FFF;background: rgba(0, 0, 0,.1);}
+.nav-show,.nav-item a .white{
+	color: #FFF;background:rgba(0,0,0,.1);
+	}
+
+/* nav-mini */
+.nav-mini.nav{width: 60px;}
+.nav-mini.nav .nav-icon{/* margin-left:-2px; */}
+.nav-mini.nav .nav-item>a span{display: none;}
+.nav-mini.nav .nav-more{margin-right: -20px;}
+.nav-mini.nav .nav-item ul{position: absolute;top:0px;left:60px;width: 180px;z-index: 99;background:#3C474C;overflow: hidden;}
+.nav-mini.nav .nav-item:hover{background:rgba(255,255,255,.1);}
+.nav-mini.nav .nav-item:hover .nav-item a{color:#FFF;}
+.nav-mini.nav .nav-item:hover a:before{opacity:1;}
+.nav-mini.nav .nav-item:hover ul{display: block;}
+.main {
+	margin-left: 150px;
+	clip: rect(auto,auto,auto,0px);
+}
+.ueditor {
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+	margin-bottom: 30px;
+}
+.ueditor1 {
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	float: left;
+	margin-bottom: 30px;
+}
+.main .header {
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	float: left;
+	height: 40px;
+}
+.nav .nav-top .ntimg a{
+	width: 63px;
+	padding-left: 10px;
+	height: 60px;
+}
+.userbox {
+	color: #FFF;
+	float: left;
+	width: 77px;
+	padding-top: 20px;
+}
+.nav-top {
+	float: left;
+	width: 150px;
+	height: 60px;
+}
+.ntimg {
+	float: left;
+	height: 60px;
+	width: 73px;
+}
+.bg {
+	background-image: url(../images/login_bg.jpg);
+	background-repeat: repeat;
+}
+.login {
+	width: 745px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -320px;
+	margin-top: -200px;
+}
+.button {
+	width: 50px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 54px;
+	float: left;
+	display: block;
+	text-indent: -9999px;
+	border: none;
+	margin-top: 10px;
+	position: relative;
+	background-image: url(../images/login_button.jpg);
+	margin-left: 5px;
+}
+.logo {
+	background-image: url(../images/admin_logo.png);
+	background-repeat: no-repeat;
+	background-position: 80px center;
+	height: 150px;
+}
+.login_form {
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 705px;
+}
+.login_form .user{ background-image:url(../images/login_name_bg1.jpg); width:640px; height:120px; float:left;}
+.login_form .reb{
+	float: left;
+	height: 56px;
+	margin-top: 25px;
+	margin-left: 15px;
+}
+.login_form .text_value {
+	float: left;
+	margin-left: 14px;
+	padding-left: 10px;
+	margin-top: 10px;
+	width: 230px;
+	height: 56px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #666;
+	font-weight: bold;
+	border: none;
+	background-color: #f5f6f7;
+	padding-right: 10px;
+}
+.login_form .text_reb {
+	float: left;
+	width: 20px;
+	height: 20px;
+	font-size: 16px;
+	color: #666;
+	font-weight: bold;
+	border: none;
+	background-color: #f5f6f7;
+}
+.login .msgbox{
+	float: left;
+	width: 640px;
+	height: 40px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #F00;
+	text-align: center;
+	}
+.foot { padding-top:30px; text-align:center; color:#FFF; padding-right:80px;}
+
+.search {
+	width: 96%;
+	background-color: #FFF;
+	float: left;
+	border-radius: 3px;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-bottom: 20px;
+}
+.style1 {
+	width: 97%;
+	float: left;
+	font-size: 150%;
+	line-height: 250%;
+	color: #333;
+	padding-right: 2%;
+	padding-left: 1%;
+}
+.style2{
+	width: 90px;
+	float: left;
+	font-size: 150%;
+	line-height: 250%;
+	color: #333;
+	padding-left: 1%;
+}
+.sform {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	height: 50px;
+	font-size: 110%;
+	color: #666;
+	margin-bottom: 30px;
+}
+.sform1 {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-size: 140%;
+	color: #666;
+	margin-bottom: 30px;
+}
+.sform2 {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-size: 140%;
+	color: #666;
+	margin-bottom: 30px;
+}
+.sform4 {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-size: 140%;
+	color: #666;
+
+}
+.sform3 {
+	float: left;
+	width: 96%;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-size: 140%;
+	color: #666;
+	margin-bottom: 30px;
+}
+.top a {
+	float: left;
+	height: 35px;
+	width: 100%;
+	font-size: 120%;
+	color: #FFF;
+	background-color: #1a1a1a;
+	text-align: center;
+	padding-top: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	letter-spacing: 2px;
+	border-bottom-color: #FFF;
+}
+.information {
+	height: 40px;
+	width: 40px;
+	background-image: url(../images/headimg.png);
+	padding-left: 40px;
+	float: left;
+}
+.top {
+	height: 40px;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	position: fixed;
+	z-index: 9999;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+}
+.middle {
+	overflow: hidden;
+	display: flex;
+}
+.float {
+	overflow: hidden;
+}
+#container {
+	z-index: 0;
+}
+.box {
+	width: 150px;
+	position: absolute;
+}
+.notice {
+	width: 96%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
+}
+#charts {
+	width: 96%;
+	height: 600px;
+	background-color: #FFF;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-radius: 3px;
+	float: left;
+}
+.foorer {
+	width: 96%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
+	height: 50px;
+	text-align: center;
+	clip: rect(auto,auto,0px,auto);
+	margin-bottom: 0px;
+}
+.logomain {
+	width: 96%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
+	border-radius: 3px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+.flatmain {
+	width: 96%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: left;
+	border-radius: 3px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+.logomain #formBox #cropedBigImg {
+	height: 50px;
+	width: 170px;
+}
+#formBox #cropedBigImg2 {
+	width: 100%;
+}
+#formBox #cropedBigImg3 {
+	height: 47%;
+	width: 100%;
+}
+.bottons {
+	height: 30px;
+	width: 60px;
+	font-family: "微软雅黑";
+	font-size: 100%;
+}
+.bottons2 {
+	height: 30px;
+	width: 30px;
+	font-family: "微软雅黑";
+	font-size: 100%;
+	margin-left: 10px;
+}
+.buttonbox {
+	float: left;
+	height: 30px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.tablemain table,table tr th, table tr td {
+	border: 1px solid #CCC;
+	
+}
+.fang_cb {
+	height: 20px;
+	width: 20px;
+	font-family: "微软雅黑";
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.tablemain table { min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse; padding:2px;} {
+
+}
+.linkinput {
+	width: 250px;
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 30px;
+}
+
+
+.contactinputs {
+	width: 100%;
+	height: 30px;
+
+}
+.contactinputs1 {
+	width: 90%;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.inputs {
+	width: 200px;
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 30px;
+}
+
+.lastceng {
+	width: 300px;
+	float: left;
+	margin-right: 10px;
+}
+.inputh{
+	width: 250px;
+	float: left;
+	}
+input {
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	line-height: 120%;
+	background-color: #FFF;
+	color: #333;
+	height: 25px;
+	font-size: 16px;
+	width: 350px;
+}
+textarea {
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	line-height: 120%;
+	background-color: #FFF;
+	color: #333;
+	font-size: 16px;
+}
+select {
+	font-family: "微软雅黑";
+	color: #FFF;
+	height: 25px;
+	width: 65px;
+}
+
+.list {
+	width: 96%;
+	background-color: #FFF;
+	float: left;
+	border-radius: 3px;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-bottom: 20px;
+}
+
+.banneraddmain {
+	width: 96%;
+	background-color: #FFF;
+	float: left;
+	border-radius: 3px;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-bottom: 20px;
+}
+
+.tablemain {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.c_red {
+	background-color: #e25050;
+	font-weight: bolder;
+	color: #FFF;
+}
+.c_green {
+	background-color: #4db94d;
+	font-weight: bolder;
+	color: #FFF;
+}
+.c_qing {
+	background-color: #1fbba6;
+	font-weight: bolder;
+	color: #FFF;
+}
+.c_blue {
+	background-color: #428bca;
+	font-weight: bolder;
+	color: #FFF;
+}
+.listbox {
+	float: left;
+	width: 96%;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+.c_yellow {
+	background-color: #ffa415;
+	font-weight: bolder;
+	color: #FFF;
+}
+
+.i_flie {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: bolder;
+	float: left;
+	height: 25px;
+	width: 210px;
+	color: #FFF;
+	background-color: #d162de;
+}
+.logobox {
+	height: 50px;
+	width: 220px;
+	background-position: center center;
+	padding-top: 25px;
+	float: left;
+}
+.logobox2 {
+	width: 100%;
+	height:37%;
+	padding-top: 25px;
+	float: left;
+}
+
+.iputbox {
+	height: 100px;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+.iputbox {
+	height: 100px;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+.linkbox {
+	width: 250px;
+	height: 100px;
+	float: left;
+	margin-top: 25px;
+
+}
+.fontbox {
+	float: left;
+	font-size: 140%;
+	color: #666;
+}
+
+
+.save {
+	float: left;
+	width: 2%;
+	height: 20px;
+	margin-bottom: 20px;
+	margin-right: 48%;
+	margin-left: 48%;
+}
+.save1 {
+	float: left;
+	width: 2%;
+	height: 7px;
+	margin-bottom: 20px;
+	margin-left: 40px;
+	margin-top: 13px;
+}
+.boox {
+	float: left;
+	margin-right: 2%;
+	margin-left: 2%;
+	width: 96%;
+}
+.contactbox {
+	float: left;
+	width: 60%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+.contactbox1 {
+	float: left;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+.contactbox1 {
+	float: left;
+	width: 100%;
+}
+.logoimgbox {
+	float: left;
+	width: 40%;
+	margin-top: 20px;
+	padding-left: 10%;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+.logoimgbox2 {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+}
+.linkboox {
+	float: left;
+	width: 40%;
+	margin-top: 20px;
+	padding-right: 10%;
+}
+.gill {
+	float: left;
+	width: 80%;
+}
+.gil3 {
+	float: left;
+	width: 80%;
+}
+.100left {
+	float: left;
+	width: 100%;
+}
+.red {
+	color: #F00;
+}
+.textyu {
+	float: left;
+	width: 100%;
+}
+.textyu1 {
+	float: left;
+	width: 90%;
+	margin-bottom: 5px;
+}
+.sdsdd {
+	float: left;
+	height: 30px;
+	width: 100%;
+}
+
+
+.gsjj {
+	float: left;
+	width: 100%;
+}
+.jjmain {
+	width: 80%;
+	padding-top: 10px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 10%;
+	margin-left: 10%;
+	color: #666;
+	font-size: 15px;
+	line-height: 30px;
+}
+.jjt {
+	width: 373px;
+	float: left;
+	margin-bottom: 30px;
+	margin-right: 30px;
+}.gil3 ul li {
+	float: left;
+	width: 100%;
+}
+.footout {
+	background-color: #F00;
+	position: fixed;
+	z-index: 10;
+	margin-bottom: 0;
+	height: 100px;
+	width: 100%;
+}
+.footout a {
+	color: #CCC;
+	height: 50px;
+	width: 100px;
+	border: 1px solid #FFF;
+	padding-right: 7px;
+	padding-left: 7px;
+}
+.nav .footout a:hover {
+	color: #FFF;
+}
+#header22 {
+	width: 100%;
+	background-color: #1a1a1a;
+	float: left;
+	border-top-width: 10px;
+	border-bottom-width: 10px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #1a1a1a;
+	border-bottom-color: #1a1a1a;
+	margin-bottom: 20px;
+}
+#logo {
+	width: 10%;
+	float: left;
+	margin-left: 10%;
+}
+#logo img {
+	height: 50px;
+	width: 170px;
+
+	
+}
+
+
+#pag a {
+	border: 0.5px solid #CCC;
+	color: #0099FF;
+	text-decoration: none;
+	text-align: center;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-size: 14px;
+}
+#pag {
+	font-family: "微软雅黑";
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+

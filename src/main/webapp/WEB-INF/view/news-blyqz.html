@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/muban.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>广东中科立信科技有限公司</title>
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable --> 
+  <link href="CSS/css.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>    
+</head> 
+<body  onload="ImageMove()" >
+  <div id="header"> 
+    <div id="logo"><a href="index.html"><img src="images/index/logo3.png" title="广东中科立信科技有限公司"/></a></div> 
+    
+    <div class="juz">
+
+        <!-- InstanceBeginEditable name="nanv" --> 
+        <div  id="nanv">
+          <ul>
+            <li><a href="index.html">首页</a></li>  
+            <li><a href="culture.html">企业简介</a></li>
+            <li><a href="news.html" class="on">公司新闻</a></li>
+            <li><a href="productq.html">产品介绍</a></li> 
+            <li><a href="case.html">项目案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul> 
+        </div>
+        <!-- InstanceEndEditable -->
+      </div>
+    </div>
+    
+    <div id="fhtop" onclick="pageScroll()" style="display:none"><img src="images/float_4.png" width="55" height="55" /></div>
+    <div id="main">
+     <!-- InstanceBeginEditable name="main" -->
+
+     <div class="cnanv">
+    <div class="qqq">当前位置：<a href="index.html">首页</a>-><a href="news.html">公司新闻</a></div>
+    
+    </div>
+    
+    <div class="NewsMian"> 
+    <div class="NWTitle">博罗县杨桥镇揭幕仪式</div>
+    <div class="NWtime">2017-12-06</div>
+    <div class="NWwz">　　为全面贯彻落实市委、市政府实施2016年十件民生实事的要求和市政府工作报告提出的全力办好民生实事的工作部署，切实履行为全市人民群众办好民生实事的承诺，在惠州全市范围内建成多个24小时自助办证点，解决偏远地区和城市中心人口密集区域群众办证需求，方便群众能就近办理电子港澳通行证业务。根据《惠州市2016年十件民生实事工作实施方案》关于“完成出入境自助办证点建设”的要求，结合我县实际情况，特制定此工作方案。根据《惠州市2016年十件民生实事工作实施方案》要求，本期项目须于2017年年底竣工并交付使用，项目主要内容是在博罗县发达镇区建设“出入境24小时自助办证点”，进一步方便群众能就近办理电子港澳通行证业务，从而使博罗县公安局出入境服务在整体自助设备配套、自助办理点分布、服务质量提升等方面与市局达到同等水平。<br/>
+            
+　　现由我司负责的博罗县“出入境24小时自助办证点”项目，其中博罗县杨桥镇出入境24小时自助办证区揭牌仪式在2017年12月6日在杨侨镇派出所隆重举行。</div>
+    <div class="NWimg"><img src="images/news/blyqz.jpg"/></div>
+    <div class="NWimg"><img src="images/news/blyqz1.jpg"/></div>
+    <div class="NWimg"><img src="images/news/blyqz2.jpg"/></div>
+    <div class="NWimg"><img src="images/news/blyqz3.jpg"/></div>
+    
+    </div>
+     
+     <!-- InstanceEndEditable --> 
+   </div>
+   
+ </div>
+ <div id="footer"> 
+  <div  id="copyright" class="align">Copyright © 2017 gdzklx.com 粤ICP备17081505号</div>
+  <div id="nanvs">
+    <ul>
+      <li><a href="culture.html">企业简介</a></li> 
+      <li><a href="news.html">公司新闻</a></li>
+      <li><a href="productq.html">产品介绍</a></li>
+      <li><a href="case.html">项目案例</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+
+   $(".prev,.next").hover(function(){
+    $(this).stop(true,false).fadeTo("show",0.9);
+  },function(){
+    $(this).stop(true,false).fadeTo("show",0.4);
+  });
+   
+   $(".gsjjimage-box").slide({
+    titCell:".hd ul",
+    mainCell:".bd ul",
+    effect:"fold",
+    interTime:3000,
+    delayTime:1000,
+    autoPlay:true,
+    autoPage:true, 
+    trigger:"click" ,
+	mouseOverStop:true
+  });
+
+
+ });
+  function pageScroll(){
+    window.scrollBy(0,-4);
+    scrolldelay = setTimeout('pageScroll()',1);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+  }
+  $(function () {              
+            //绑定滚动条事件  
+              //绑定滚动条事件  
+              $(window).bind("scroll", function () {  
+                var sTop = $(window).scrollTop();  
+                var sTop = parseInt(sTop);  
+                if (sTop >= 400) {  
+                  if (!$("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideDown();  
+                    } catch (e) {  
+                      $("#fhtop").show();  
+                    }                        
+                  }  
+                }  
+                else {  
+                  if ($("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideUp();  
+                    } catch (e) {  
+                      $("#fhtop").hide();  
+                    }                         
+                  }  
+                }   
+              });  
+            })  
+          </script>
+
+          <!-- InstanceEnd --></html>

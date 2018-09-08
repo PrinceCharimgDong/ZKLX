@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/muban.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>广东中科立信科技有限公司</title>
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable --> 
+  <link href="CSS/css.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>    
+</head> 
+<body  onload="ImageMove()" >
+  <div id="header"> 
+    <div id="logo"><a href="index.html"><img src="images/index/logo3.png" title="广东中科立信科技有限公司"/></a></div> 
+    
+    <div class="juz">
+
+        <!-- InstanceBeginEditable name="nanv" --> 
+        <div  id="nanv">
+          <ul>
+            <li><a href="index.html">首页</a></li>  
+            <li><a href="culture.html">企业简介</a></li>
+            <li><a href="news.html" class="on">公司新闻</a></li>
+            <li><a href="productq.html">产品介绍</a></li> 
+            <li><a href="case.html">项目案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul> 
+        </div>
+        <!-- InstanceEndEditable -->
+      </div>
+    </div>
+    
+    <div id="fhtop" onclick="pageScroll()" style="display:none"><img src="images/float_4.png" width="55" height="55" /></div>
+    <div id="main">
+     <!-- InstanceBeginEditable name="main" -->
+
+     <div class="cnanv">
+    <div class="qqq">当前位置：<a href="index.html">首页</a>-><a href="news.html">公司新闻</a></div>
+    
+    </div>
+    
+    <div class="NewsMian"> 
+    <div class="NWTitle">惠阳正式启用居民身份证自助设备</div>
+    <div class="NWtime">2017-12-22</div>
+    <div class="NWwz">　　惠阳正式启用由我司负责采购的居民身份证自助设备，惠阳市民可自助办理身份证期满换领、丢失补领和损坏补领业务，不用再扎堆去户政部门办理了。据了解，已启用的两处自助设备分别位于惠阳区行政服务中心和惠阳区公安分局24小时自助办证区，均可24小时工作。“居民二代身份证自助申领机”（以下简称“自助机”）是新时代便民服务柜台机，能支持身份证业务的到期换证、损坏换证、丢失换证这3项业务，设备可24小时工作。申领人按提示操作即可办理身份证申领的各项业务，就像在ATM机上取钱一样便捷。需要注意的是，目前自助机仅限惠州市户口本人操作，取证方式仅限邮寄，只能办理补、换证。也就是说，初次办证仍需前往户口所在地公安分局办理。</div>
+    <div class="NWimg"><img src="images/news/hyzzbz.jpg"/></div>
+    <div class="NWwz">
+      <ul>
+        <li>办证所需材料：1、身份证原件（丢失、损坏换证除外）　2、照片回执（自行前往照相馆拍摄）　3、银联卡（办证缴费需要银联卡交易）<br /></li>
+        <li><br />办证地点：
+          <p >
+            &#9679;惠阳区行政服务中心B栋1楼自助服务区，地址为惠南大道好益康一路 <br />
+            &#9679;惠阳公安分局24小时自助办证区（惠阳区公安分局刑侦大队门口），地址为淡水街道人民六路2号 </p>
+        </li>
+      </ul>
+    </div>
+    <div class="NWimg"><img src="images/news/hyzzbz2.jpg"/></div>
+    
+    </div>
+     
+     <!-- InstanceEndEditable --> 
+   </div>
+   
+ </div>
+ <div id="footer"> 
+  <div  id="copyright" class="align">Copyright © 2017 gdzklx.com 粤ICP备17081505号</div>
+  <div id="nanvs">
+    <ul>
+      <li><a href="culture.html">企业简介</a></li> 
+      <li><a href="news.html">公司新闻</a></li>
+      <li><a href="productq.html">产品介绍</a></li>
+      <li><a href="case.html">项目案例</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+
+   $(".prev,.next").hover(function(){
+    $(this).stop(true,false).fadeTo("show",0.9);
+  },function(){
+    $(this).stop(true,false).fadeTo("show",0.4);
+  });
+   
+   $(".gsjjimage-box").slide({
+    titCell:".hd ul",
+    mainCell:".bd ul",
+    effect:"fold",
+    interTime:3000,
+    delayTime:1000,
+    autoPlay:true,
+    autoPage:true, 
+    trigger:"click" ,
+	mouseOverStop:true
+  });
+
+
+ });
+  function pageScroll(){
+    window.scrollBy(0,-4);
+    scrolldelay = setTimeout('pageScroll()',1);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+  }
+  $(function () {              
+            //绑定滚动条事件  
+              //绑定滚动条事件  
+              $(window).bind("scroll", function () {  
+                var sTop = $(window).scrollTop();  
+                var sTop = parseInt(sTop);  
+                if (sTop >= 400) {  
+                  if (!$("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideDown();  
+                    } catch (e) {  
+                      $("#fhtop").show();  
+                    }                        
+                  }  
+                }  
+                else {  
+                  if ($("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideUp();  
+                    } catch (e) {  
+                      $("#fhtop").hide();  
+                    }                         
+                  }  
+                }   
+              });  
+            })  
+          </script>
+
+          <!-- InstanceEnd --></html>

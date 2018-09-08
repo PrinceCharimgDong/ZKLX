@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/muban.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>广东中科立信科技有限公司</title>
+  <!-- InstanceEndEditable --> 
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable --> 
+  <link href="CSS/css.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>    
+</head> 
+<body  onload="ImageMove()" >
+  <div id="header"> 
+    <div id="logo"><a href="index.html"><img src="images/index/logo3.png" title="广东中科立信科技有限公司"/></a></div> 
+    
+    <div class="juz">
+
+        <!-- InstanceBeginEditable name="nanv" --> 
+        <div  id="nanv">
+          <ul>
+            <li><a href="index.html">首页</a></li>  
+            <li><a href="culture.html">企业简介</a></li>
+            <li><a href="news.html" class="on">公司新闻</a></li>
+            <li><a href="productq.html">产品介绍</a></li> 
+            <li><a href="case.html">项目案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul> 
+        </div>
+        <!-- InstanceEndEditable -->
+      </div>
+    </div>
+    
+    <div id="fhtop" onclick="pageScroll()" style="display:none"><img src="images/float_4.png" width="55" height="55" /></div>
+    <div id="main">
+     <!-- InstanceBeginEditable name="main" -->
+
+     <div class="cnanv">
+    <div class="qqq">当前位置：<a href="index.html">首页</a>-><a href="news.html">公司新闻</a></div>
+    
+    </div>
+    
+    <div class="NewsMian"> 
+    <div class="NWTitle">惠东县多祝镇下埔村扶贫</div>
+    <div class="NWtime">2018-01-23</div>
+    <div class="NWwz">　　为落实市委、市政府的精准扶贫政策，我公司积极参与其中。在2018年1月23日和公安局领导下乡到惠州市惠东县多祝镇下铺村发放扶贫物品。走访58家贫困户，每户各发放一桶油，两包面、一袋米。给贫困户和贫困党员等带去公司所有人的春节慰问和良好祝愿，并到贫困户家中对扶贫开发工作进行调研。</div>
+    <div class="NWimg"><img src="images/news/hddzz2.jpg"/></div>
+    <div class="NWimg"><img src="images/news/hddzz.jpg"/></div>
+    <div class="NWimg"><img src="images/news/hddzz3.jpg"/></div>
+    
+    </div>
+     
+     <!-- InstanceEndEditable --> 
+   </div>
+   
+ </div>
+ <div id="footer"> 
+  <div  id="copyright" class="align">Copyright © 2017 gdzklx.com 粤ICP备17081505号</div>
+  <div id="nanvs">
+    <ul>
+      <li><a href="culture.html">企业简介</a></li> 
+      <li><a href="news.html">公司新闻</a></li>
+      <li><a href="productq.html">产品介绍</a></li>
+      <li><a href="case.html">项目案例</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+
+   $(".prev,.next").hover(function(){
+    $(this).stop(true,false).fadeTo("show",0.9);
+  },function(){
+    $(this).stop(true,false).fadeTo("show",0.4);
+  });
+   
+   $(".gsjjimage-box").slide({
+    titCell:".hd ul",
+    mainCell:".bd ul",
+    effect:"fold",
+    interTime:3000,
+    delayTime:1000,
+    autoPlay:true,
+    autoPage:true, 
+    trigger:"click" ,
+	mouseOverStop:true
+  });
+
+
+ });
+  function pageScroll(){
+    window.scrollBy(0,-4);
+    scrolldelay = setTimeout('pageScroll()',1);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+  }
+  $(function () {              
+            //绑定滚动条事件  
+              //绑定滚动条事件  
+              $(window).bind("scroll", function () {  
+                var sTop = $(window).scrollTop();  
+                var sTop = parseInt(sTop);  
+                if (sTop >= 400) {  
+                  if (!$("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideDown();  
+                    } catch (e) {  
+                      $("#fhtop").show();  
+                    }                        
+                  }  
+                }  
+                else {  
+                  if ($("#fhtop").is(":visible")) {  
+                    try {  
+                      $("#fhtop").slideUp();  
+                    } catch (e) {  
+                      $("#fhtop").hide();  
+                    }                         
+                  }  
+                }   
+              });  
+            })  
+          </script>
+
+          <!-- InstanceEnd --></html>
